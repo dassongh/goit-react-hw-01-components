@@ -1,9 +1,12 @@
 import Container from './components/container/Container';
 import Profile from './components/profile/Profile';
 import Statistics from './components/statistics/Statistics';
+import FriendsList from './components/friendsList/FriendsList';
+import TransactionHistory from './components/transactionHistory/TransactionHistory';
+import transactions from './components/transactionHistory/transactions.json';
+import friends from './components/friendsList/friends.json';
 import data from './components/statistics/data.json';
 import user from './components/profile/user.json';
-import './App.css';
 
 function App() {
   return (
@@ -22,6 +25,12 @@ function App() {
       </Container>
       <Container>
         <Statistics stats={data}/>
+      </Container>
+      <Container>
+        <FriendsList friends={friends}/>
+      </Container>
+      <Container>
+        <TransactionHistory transactions={transactions}/>
       </Container>
     </div>
   );
